@@ -5,12 +5,21 @@
 }
 
 body{
-    background-image: url('IMG/mar.gif');
+    /* background-image: url('IMG/mar.gif'); */
+    background-color: rgba(0, 255, 242, 0.719);
     image-rendering: pixelated;
     background-size: 100% 100%;
     position: relative;
     height: 100vh;
     overflow: hidden;
+}
+
+#iniciar{
+    background-color: red;
+    color: white;
+    font-size: large;
+    padding: 5px 8px;
+    justify-content: center;
 }
 
 header{
@@ -19,19 +28,20 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    /* background-color: rgb(0, 110, 129); */
+    background-color: rgba(49, 49, 49, 0.548);
     color: white;
     padding: 10px 20px;
-    font-family: 'Courier New', monospace;
+    font-family: 'Minecraftia', sans-serif;
     image-rendering: pixelated;
 }
 
 .NomeJogo{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    font-family: 'Courier New', monospace;
+    font-family: 'Minecraftia', sans-serif;
     color: black;
     text-transform: uppercase;
+
 }
 
 .pontuacao{
@@ -50,14 +60,15 @@ header{
     letter-spacing: 1px;
     color: Black;
     margin-bottom: 2px;
-    font-family: "Press Start 2P", system-ui;}
+    font-family: 'Minecraftia', sans-serif;
+}
 
 #pontos{
     display: block;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
-    font-family: 'Courier New', monospace;
+    font-family: 'Minecraftia', sans-serif;
 }
 
 .Pausar{
@@ -88,4 +99,25 @@ header{
 
 .obstaculo{
     /* Adicione estilos para o obstáculo aqui */
+}
+
+.lixo {
+    position: absolute;
+    width: 200px;
+    height: 200px;      
+    background-image: url('IMG/lixo.png'); 
+    background-size: contain;             
+    background-repeat: no-repeat;
+    animation: animacaoObstaculo 15s linear;
+}
+
+
+@keyframes animacaoObstaculo{
+    from{
+        right: -200px;
+    }
+    to{
+        right: 100%;
+    }
+    
 }
