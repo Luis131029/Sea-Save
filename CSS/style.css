@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('IMG/mar.gif');
+    image-rendering: pixelated;
+    background-size: 100% 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    /* background-color: rgb(0, 110, 129); */
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Courier New', monospace;
+    image-rendering: pixelated;
+}
+
+.NomeJogo{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: black;
+    text-transform: uppercase;
+}
+
+.pontuacao{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.pontuacao::before{
+    content: 'PONTUAÇÃO';
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: Black;
+    margin-bottom: 2px;
+    font-family: "Press Start 2P", system-ui;}
+
+#pontos{
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Courier New', monospace;
+}
+
+.Pausar{
+    width: 40px;
+    height: 40px;
+    /* Espaço reservado para botão de pausa futuro */
+}
+
+/* Corrigido: era .area-jogo mas no HTML é #araea-jogo */
+#araea-jogo{
+    margin: 0;
+    position: relative;
+    height: calc(100vh - 60px); /* Altura total menos o header */
+    overflow: hidden;
+}
+
+.barco{
+    position: absolute;
+    left: -100px;
+    top: 100px;
+    z-index: 10;
+}
+
+.barco img{
+    width: 500px;
+    display: block;
+}
+
+.obstaculo{
+    /* Adicione estilos para o obstáculo aqui */
+}
